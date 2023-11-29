@@ -20,6 +20,8 @@ export const GlobalStyles = createGlobalStyle`
 
     font-family: ${({ theme }) => theme.fonts.body};
     color: ${({ theme }) => theme.colors.darkGreen};
+
+    text-align: justify;
   }
 
   html {
@@ -28,7 +30,9 @@ export const GlobalStyles = createGlobalStyle`
 
   h1 {
     font-size: ${({ theme }) => theme.fontSizes.extraLarge.s};
-    
+    line-height: 36px;
+        word-spacing: 3px;
+
     @media screen and (${({ theme }) => theme.media.tablet}) {
 font-size: ${({ theme }) => theme.fontSizes.extraLarge.m};
   }
@@ -43,11 +47,13 @@ h1,
   h4,
   h5,
   h6{
-     margin: 0;
+     margin: 0 0 24px 0;
+     /* margin-bottom: 24px; */
     padding: 0;
     font-family: ${({ theme }) => theme.fonts.heading};
     font-weight: 400;
     text-transform: uppercase;
+    text-align: left;
   }
 
   p {
@@ -62,6 +68,7 @@ h1,
   }
 
   a {
+    color: inherit;
     text-decoration: none;   
   } 
 
