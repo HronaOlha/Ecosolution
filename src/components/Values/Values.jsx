@@ -1,7 +1,10 @@
-import React from "react";
-
 const Values = () => {
-  return <div>Values</div>;
+  return (
+    <section>
+      <img src="" alt="" />
+      <h2>Main values of our company</h2>
+    </section>
+  );
 };
 
 export default Values;
