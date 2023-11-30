@@ -1,5 +1,6 @@
-import { ButtonComponent } from "./Button.styled";
 import PropTypes from "prop-types";
+
+import { ButtonComponent } from "./Button.styled";
 import { IoIosArrowRoundForward } from "react-icons/io";
 const Button = ({ type, text }) => {
   return (
@@ -18,5 +19,4 @@ export default Button;
 Button.propTypes = {
   type: PropTypes.string,
   text: PropTypes.string,
-  marginbottom: PropTypes.number,
 };

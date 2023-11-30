@@ -28,8 +28,21 @@ export const GlobalStyles = createGlobalStyle`
     scroll-behavior: smooth;  
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6{
+     margin: 0;
+    padding: 0;
+    font-family: ${({ theme }) => theme.fonts.heading};
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
   h1 {
-     margin: 0 0 24px 0;
     font-size: ${({ theme }) => theme.fontSizes.extraLarge.s};
     line-height: 36px;
         word-spacing: 3px;
@@ -47,37 +60,35 @@ export const GlobalStyles = createGlobalStyle`
 
 h2{
   font-size: ${({ theme }) => theme.fontSizes.xxl};
+    line-height: 28px;
+
       @media screen and (${({ theme }) => theme.media.tablet}) {
   font-size: ${({ theme }) => theme.fontSizes.extraLarge.s};
-
-
+    line-height: 36px;
   }
     @media screen and (${({ theme }) => theme.media.desktop}) {
   font-size: ${({ theme }) => theme.fontSizes.extraLarge.m};
+      line-height: 48px;
   }
 }
 
-h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6{
-     /* margin-bottom: 24px; */
-    padding: 0;
-    font-family: ${({ theme }) => theme.fonts.heading};
-    font-weight: 400;
-    text-transform: uppercase;
-    text-align: left;
+h3{
+  font-size: ${({ theme }) => theme.fontSizes.main};
+
+  @media screen and (${({ theme }) => theme.media.tablet}) {
+  font-size: ${({ theme }) => theme.fontSizes.m};
   }
+  @media screen and (${({ theme }) => theme.media.desktop}) {
+  font-size: ${({ theme }) => theme.fontSizes.extraLarge.xs};
+  }
+}
+
+
 
   p {
     margin: 0;
     padding: 0;
-
-    @media screen and (${({ theme }) => theme.media.tablet}) {
       letter-spacing: -0.64px;
-    }
   }
 
     ul, li, ol {  
@@ -93,18 +104,21 @@ h1,
 
   img,
   picture,
-video,
-canvas,
-svg {
+  video,
+  canvas{
     display: block;
     width: 100%;
     height: auto;
   }
+
+  svg{
+  stroke: ${({ theme }) => theme.colors.darkGreen}
+  }
   
   input,
-button,
-textarea,
-select{
+  button,
+  textarea,
+  select{
     font: inherit;
     color: inherit
 }
@@ -115,19 +129,12 @@ section {
    max-width: 480px;
 
    @media screen and (${({ theme }) => theme.media.tablet}) {
-  padding: 20px 30px;
+  padding: 50px 30px;
   max-width: 768px;
   }
     @media screen and (${({ theme }) => theme.media.desktop}) {
+  padding: 60px 20px;
   max-width: 1280px;
   }
-}
-
-// Visibility
-.hide-for-mobile {
-  //hide for mobile
-@media screen and (max-width: 768px){
-    display: none;
-} 
 }
 `;

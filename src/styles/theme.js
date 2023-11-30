@@ -38,11 +38,6 @@ export const theme = {
     bold: 700,
   },
 
-  //   lineHeights: {
-  //     body: 1.5, //24px
-  //     heading: 1.75, //28px
-  //   },
-
   borders: {
     none: "none",
     normal: "1px solid",
