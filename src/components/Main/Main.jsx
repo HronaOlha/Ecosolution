@@ -1,44 +1,40 @@
-import PropTypes from "prop-types";
-import Button from "../Button/Button";
+// import Button from "../Button/Button";
+import ContactInfo from "../ContactInfo/ContactInfo";
+import { IoIosArrowRoundForward } from "react-icons/io";
+
 import {
   MainSection,
   Text,
-  // MainContacts,
-  // Address,
   MainLine,
   MainImage,
   ContactInfoContainer,
+  ButtonComponent,
 } from "./Main.styled";
-import ContactInfo from "../ContactInfo/ContactInfo";
 
-// const Main = ({ deviceType }) => {
 const Main = () => {
   return (
-    <MainSection>
+    <MainSection id="main">
       <h1>Renewable energy for any task</h1>
       <Text>
         Development and implementation of renewable non-polluting energy
         sources, generating power generation using energy wind, sun, water,
         biomass
       </Text>
-      <Button text="Learn more" />
+      {/* <Button text="Learn more" /> */}
+      <ButtonComponent className="btn" href="#cases">
+        Learn more
+        <span>
+          <IoIosArrowRoundForward size="100%" />
+        </span>
+      </ButtonComponent>
+
       <MainLine />
       <ContactInfoContainer>
         <ContactInfo />
       </ContactInfoContainer>
-      {/* <MainContacts>
-        <Address>79005, Ukraine, Lvivstreet. Shota Rustaveli, 7</Address>
-        <a href="mailto:office@ecosolution.com">office@ecosolution.com</a>
-        {deviceType === "tablet" && <p>ecosolution © 2023</p>}
-        {deviceType === "desktop" && <p>ecosolution © 2023</p>}
-      </MainContacts> */}
       <MainImage />
     </MainSection>
   );
 };
 
 export default Main;
-
-Main.propTypes = {
-  deviceType: PropTypes.string,
-};

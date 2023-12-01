@@ -1,11 +1,14 @@
 import { IoIosArrowRoundUp } from "react-icons/io";
+
 import sprite from "../../images/sprite.svg";
-import Facebook from "../../images/facebook.svg";
+
 import ContactInfo from "../ContactInfo/ContactInfo";
 import Logo from "../Logo/Logo";
+
+import HorizontalLine from "../HorizontalLine/HorizontalLine";
+
 import {
   FooterSection,
-  FooterLine,
   ButtonUp,
   SocialsContainer,
   Socials,
@@ -14,15 +17,15 @@ import {
 const Footer = () => {
   return (
     <FooterSection>
-      <FooterLine />
+      <HorizontalLine />
       <Logo />
-      <ButtonUp type="button">
+      <ButtonUp href="#main">
         <IoIosArrowRoundUp size="100%" />
       </ButtonUp>
       <SocialsContainer>
         <a href="/">
-          <Socials>
-            <use href={Facebook + "#facebook"} />
+          <Socials className="facebook">
+            <use href={sprite + "#facebook"} color="red" />
           </Socials>
         </a>
         <a href="/">

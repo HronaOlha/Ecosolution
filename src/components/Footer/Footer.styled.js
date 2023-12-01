@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Line } from "../HorizontalLine/HorizontalLine.styled";
 
 export const FooterSection = styled.section`
   display: grid;
@@ -21,9 +20,16 @@ export const FooterSection = styled.section`
       "logo logo socials buttonUp"
       "contactsInfo contactsInfo contactsInfo contactsInfo";
   }
+  @media screen and (${({ theme }) => theme.media.desktop}) {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas:
+      "line line line line line"
+      "logo logo . socials buttonUp"
+      "contactsInfo contactsInfo contactsInfo contactsInfo contactsInfo";
+  }
 `;
 
-export const ButtonUp = styled.button`
+export const ButtonUp = styled.a`
   grid-area: buttonUp;
   justify-self: end;
   border-radius: 50%;
@@ -43,17 +49,13 @@ export const ButtonUp = styled.button`
 `;
 
 export const SocialsContainer = styled.div`
-  /* text-align: center; */
   grid-area: socials;
   display: flex;
   justify-content: center;
   gap: 8px;
-  /* margin-bottom: 24px; */
+
   @media screen and (${({ theme }) => theme.media.tablet}) {
     justify-self: start;
-  }
-  @media screen and (${({ theme }) => theme.media.desktop}) {
-    justify-self: center;
   }
 `;
 
@@ -61,13 +63,8 @@ export const Socials = styled.svg`
   height: 24px;
   width: 24px;
   fill: transparent;
-`;
 
-// Additional styling of styled-components Component
-export const FooterLine = styled(Line)`
-  /* margin-bottom: 24px; */
-
-  @media screen and (${({ theme }) => theme.media.tablet}) {
-    /* margin-bottom: 16px; */
+  &:hover {
+    stroke: ${({ theme }) => theme.colors.mainGreen};
   }
 `;

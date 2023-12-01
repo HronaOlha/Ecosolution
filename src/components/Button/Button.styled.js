@@ -5,7 +5,7 @@ export const ButtonComponent = styled.button`
   display: flex;
   align-items: center;
   gap: 12px;
-  border: 1px solid #97d28b;
+  border: 1px solid ${({ theme }) => theme.colors.mainGreen};
   border-radius: 50px;
   padding: 3px 4px 3px 16px;
   background-color: transparent;

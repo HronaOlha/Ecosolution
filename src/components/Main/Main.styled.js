@@ -11,7 +11,7 @@ export const MainSection = styled.section`
   @media screen and (${({ theme }) => theme.media.tablet}) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 40px;
+    /* grid-column-gap: 40px; */
     grid-template-areas:
       "heading heading text text"
       "heading heading button button"
@@ -24,18 +24,21 @@ export const MainSection = styled.section`
   }
 
   @media screen and (${({ theme }) => theme.media.desktop}) {
-    grid-column-gap: 180px;
+    grid-column-gap: 255px;
     padding-top: 200px;
   }
 
-  & > button {
+  & > .btn {
     grid-area: button;
+
+    width: 149px;
 
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 24px;
 
     @media screen and (${({ theme }) => theme.media.tablet}) {
+      width: auto;
       margin-left: 0;
       margin-bottom: 26px;
     }
@@ -49,7 +52,10 @@ export const MainSection = styled.section`
     margin: 0 0 24px 0;
 
     @media screen and (${({ theme }) => theme.media.tablet}) {
-      padding-right: 30px;
+      padding-right: 50px;
+    }
+    @media screen and (${({ theme }) => theme.media.desktop}) {
+      padding-right: 0;
     }
   }
 `;
@@ -128,5 +134,38 @@ export const ContactInfoContainer = styled.div`
     @media screen and (max-width: 768px) {
       display: none;
     }
+  }
+`;
+
+export const ButtonComponent = styled.a`
+  /* position: relative; */
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid ${({ theme }) => theme.colors.mainGreen};
+  border-radius: 50px;
+  padding: 3px 4px 3px 16px;
+  background-color: transparent;
+  font-size: 16px;
+  transition: background-color 400ms ease, color 400ms ease,
+    border-color 400ms ease;
+
+  & > p {
+    display: inline-block;
+  }
+
+  & > span {
+    border-radius: 50%;
+    background-color: ${({ theme }) => theme.colors.mainGreen};
+    height: 32px;
+    width: 32px;
+    padding: 5px;
+    color: ${({ theme }) => theme.colors.darkGreen};
+  }
+  &:focus,
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.darkGreen};
+    border-color: ${({ theme }) => theme.colors.darkGreen};
+    color: ${({ theme }) => theme.colors.mainGreen};
   }
 `;

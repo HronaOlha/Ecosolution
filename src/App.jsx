@@ -36,7 +36,7 @@ function App() {
   return (
     <>
       <Header />
-      <Main deviceType={deviceType} />
+      <Main />
       <Values deviceType={deviceType} />
       <Electricity />
       <Cases />

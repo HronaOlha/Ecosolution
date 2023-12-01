@@ -8,12 +8,25 @@ export const ContactInfoContainer = styled.div`
   gap: 8px;
   align-items: center;
 
-  /* text-align: center; */
-  /* margin-bottom: 36px; */
-
   @media screen and (${({ theme }) => theme.media.tablet}) {
-    /* grid-area: mainContacts; */
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "address address mail ecosolution";
+  }
+  @media screen and (${({ theme }) => theme.media.desktop}) {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "address address .  mail ecosolution";
+  }
+
+  & > p {
+    grid-area: address;
+  }
+  & > a {
+    grid-area: mail;
+  }
+  & > .ecosolution {
+    grid-area: ecosolution;
+    justify-self: end;
   }
 `;
