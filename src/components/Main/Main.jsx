@@ -3,13 +3,16 @@ import Button from "../Button/Button";
 import {
   MainSection,
   Text,
-  MainContacts,
-  Address,
+  // MainContacts,
+  // Address,
   MainLine,
   MainImage,
+  ContactInfoContainer,
 } from "./Main.styled";
+import ContactInfo from "../ContactInfo/ContactInfo";
 
-const Main = ({ deviceType }) => {
+// const Main = ({ deviceType }) => {
+const Main = () => {
   return (
     <MainSection>
       <h1>Renewable energy for any task</h1>
@@ -20,12 +23,15 @@ const Main = ({ deviceType }) => {
       </Text>
       <Button text="Learn more" />
       <MainLine />
-      <MainContacts>
+      <ContactInfoContainer>
+        <ContactInfo />
+      </ContactInfoContainer>
+      {/* <MainContacts>
         <Address>79005, Ukraine, Lvivstreet. Shota Rustaveli, 7</Address>
         <a href="mailto:office@ecosolution.com">office@ecosolution.com</a>
         {deviceType === "tablet" && <p>ecosolution © 2023</p>}
         {deviceType === "desktop" && <p>ecosolution © 2023</p>}
-      </MainContacts>
+      </MainContacts> */}
       <MainImage />
     </MainSection>
   );

@@ -112,3 +112,21 @@ export const MainLine = styled(Line)`
     margin-bottom: 16px;
   }
 `;
+
+export const ContactInfoContainer = styled.div`
+  grid-area: mainContacts;
+  margin-bottom: 36px;
+
+  @media screen and (${({ theme }) => theme.media.tablet}) {
+    margin-bottom: 40px;
+  }
+  @media screen and (${({ theme }) => theme.media.desktop}) {
+    margin-bottom: 36px;
+  }
+
+  & > div > .ecosolution {
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+`;
