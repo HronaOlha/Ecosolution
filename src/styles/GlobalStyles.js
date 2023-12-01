@@ -59,6 +59,7 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 h2{
+    margin: 0 0 24px 0;
   font-size: ${({ theme }) => theme.fontSizes.xxl};
     line-height: 28px;
 

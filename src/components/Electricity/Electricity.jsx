@@ -1,7 +1,21 @@
-import React from "react";
+import {
+  ElectricitySection,
+  ElectricityTitle,
+  ElectricityCounter,
+  VerticalLine,
+} from "./Electricity.styled";
 
 const Electricity = () => {
-  return <div>Electricity</div>;
+  return (
+    <ElectricitySection>
+      <ElectricityTitle>Electricity we produced for all time</ElectricityTitle>
+      <VerticalLine />
+      <ElectricityCounter>
+        <p>1.134.147.814</p>
+        <span>kWh</span>
+      </ElectricityCounter>
+    </ElectricitySection>
+  );
 };
 
 export default Electricity;

@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 import sprite from "../../images/sprite.svg";
 
 import {
-  ValuesSection,
   ValuesTexts,
   ValuesGrid,
   WindFarmImg,
@@ -16,7 +15,7 @@ import workerDesk from "../../images/worker-by-solar-panels-desk.png";
 
 const Values = ({ deviceType }) => {
   return (
-    <ValuesSection>
+    <section>
       <ValuesTexts>
         <h2>Main values of our company</h2>
         <p>
@@ -85,7 +84,7 @@ const Values = ({ deviceType }) => {
           </>
         )}
       </ValuesGrid>
-    </ValuesSection>
+    </section>
   );
 };
 

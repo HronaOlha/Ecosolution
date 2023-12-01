@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-export const ValuesSection = styled.section``;
-
 export const ValuesTexts = styled.div`
   @media screen and (${({ theme }) => theme.media.tablet}) {
     display: grid;
@@ -13,7 +11,7 @@ export const ValuesTexts = styled.div`
   }
 
   & > h2 {
-    margin: 0 0 24px 0;
+    /* margin: 0 0 24px 0; */
     padding-right: 10px;
 
     @media screen and (${({ theme }) => theme.media.tablet}) {
