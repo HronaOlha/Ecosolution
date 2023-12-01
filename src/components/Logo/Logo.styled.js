@@ -9,8 +9,9 @@ export const LogoContainer = styled.div`
 export const Svg = styled.svg`
   stroke: transparent;
   fill: ${({ theme }) => theme.colors.darkGreen};
-  transition: fill 400ms ease, color 400ms ease;
+  transition: fill 400ms ease;
 
+  &:focus,
   &:hover {
     fill: ${({ theme }) => theme.colors.mainGreen};
   }

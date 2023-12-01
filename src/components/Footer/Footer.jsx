@@ -19,9 +19,11 @@ const Footer = () => {
     <FooterSection>
       <HorizontalLine />
       <Logo />
+
       <ButtonUp href="#main">
         <IoIosArrowRoundUp size="100%" />
       </ButtonUp>
+
       <SocialsContainer>
         <a href="/">
           <Socials className="facebook">
@@ -34,6 +36,7 @@ const Footer = () => {
           </Socials>
         </a>
       </SocialsContainer>
+
       <ContactInfo />
     </FooterSection>
   );

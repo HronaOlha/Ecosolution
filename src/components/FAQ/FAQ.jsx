@@ -1,7 +1,5 @@
-import React from "react";
-
-const FAQ = () => {
-  return <div>FAQ</div>;
+const Faq = () => {
+  return <section></section>;
 };
 
-export default FAQ;
+export default Faq;

@@ -9,7 +9,6 @@ export const FooterSection = styled.section`
     "logo logo logo logo logo logo buttonUp"
     ". . . socials . . . "
     "contactsInfo contactsInfo contactsInfo contactsInfo contactsInfo contactsInfo contactsInfo";
-
   padding-top: 24px;
   padding-bottom: 24px;
 
@@ -39,11 +38,11 @@ export const ButtonUp = styled.a`
   width: 32px;
   padding: 5px;
   color: ${({ theme }) => theme.colors.darkGreen};
+  transition: background-color 400ms ease, color 400ms ease;
 
   &:focus,
   &:hover {
     background-color: ${({ theme }) => theme.colors.darkGreen};
-    border-color: ${({ theme }) => theme.colors.darkGreen};
     color: ${({ theme }) => theme.colors.mainGreen};
   }
 `;
@@ -63,6 +62,7 @@ export const Socials = styled.svg`
   height: 24px;
   width: 24px;
   fill: transparent;
+  transition: stroke 400ms ease;
 
   &:hover {
     stroke: ${({ theme }) => theme.colors.mainGreen};

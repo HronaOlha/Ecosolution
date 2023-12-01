@@ -6,7 +6,7 @@ import windTurbineTab from "../../images/wind-turbine-tab.png";
 import windTurbineDesk from "../../images/wind-turbine-desk.png";
 
 export const MainSection = styled.section`
-  padding-top: 146px;
+  padding-top: 222px;
 
   @media screen and (${({ theme }) => theme.media.tablet}) {
     display: grid;
@@ -19,13 +19,13 @@ export const MainSection = styled.section`
       "mainContacts mainContacts mainContacts mainContacts"
       "mainImage mainImage mainImage mainImage";
 
-    padding-top: 168px;
+    padding-top: 240px;
     text-align: left;
   }
 
   @media screen and (${({ theme }) => theme.media.desktop}) {
     grid-column-gap: 255px;
-    padding-top: 200px;
+    padding-top: 264px;
   }
 
   & > .btn {
