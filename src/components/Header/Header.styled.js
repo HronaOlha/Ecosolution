@@ -37,29 +37,6 @@ export const BurgerBtn = styled.button`
   }
 `;
 
-export const ContactBtn = styled.a`
-  display: flex;
-  align-items: center;
-  gap: 12px;
-
-  border-radius: 50px;
-  background-color: ${({ theme }) => theme.colors.mainGreen};
-  padding: 10px 16px;
-  color: ${({ theme }) => theme.colors.darkGreen};
-  transition: background-color 400ms ease, color 400ms ease;
-
-  &:focus,
-  &:hover {
-    background-color: ${({ theme }) => theme.colors.darkGreen};
-    color: ${({ theme }) => theme.colors.mainGreen};
-  }
-
-  & > svg {
-    border-radius: 50%;
-    background-color: ${({ theme }) => theme.colors.darkGreen};
-  }
-`;
-
 // export const ContactSpan = styled.span`
 //   display: inline-block;
 //   height: 14px;

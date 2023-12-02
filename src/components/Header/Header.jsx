@@ -2,19 +2,14 @@ import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
 
 import { IoIosMenu } from "react-icons/io";
-import { BsFillArrowDownCircleFill } from "react-icons/bs";
 
 import Logo from "../Logo/Logo";
-import { HeaderSection, Nav, BurgerBtn, ContactBtn } from "./Header.styled";
+import { HeaderSection, Nav, BurgerBtn } from "./Header.styled";
+import ContactBtn from "../ContactBtn/ContactBtn";
 // import { MenuBurger } from "../BurgerMenu/BurgerMenu";
 
 const Header = ({ deviceType }) => {
   const [isScrolled, setIsScrolled] = useState(false);
-  // const [openMenu, setOpenMenu] = useState(false);
-
-  // const handleOpenMenu = () => {
-  //   setOpenMenu(!openMenu);
-  // };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,25 +28,14 @@ const Header = ({ deviceType }) => {
 
   return (
     <HeaderSection className={isScrolled ? "scrolled" : ""}>
-      {/* {openMenu && <MenuBurger handleOpenMenu={handleOpenMenu} />} */}
       <Logo />
       <Nav>
         <BurgerBtn>
           <IoIosMenu size="100%" />
         </BurgerBtn>
 
-        {deviceType === "tablet" && (
-          <ContactBtn href="#contact">
-            Get in touch
-            <BsFillArrowDownCircleFill />
-          </ContactBtn>
-        )}
-        {deviceType === "desktop" && (
-          <ContactBtn href="#contact">
-            Get in touch
-            <BsFillArrowDownCircleFill />
-          </ContactBtn>
-        )}
+        {deviceType === "tablet" && <ContactBtn text="Get in touch" />}
+        {deviceType === "desktop" && <ContactBtn text="Get in touch" />}
       </Nav>
     </HeaderSection>
   );

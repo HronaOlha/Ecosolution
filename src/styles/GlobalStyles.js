@@ -30,14 +30,12 @@ export const GlobalStyles = createGlobalStyle`
 
   h1,
   h2,
-  h3,
-  h4,
-  h5,
-  h6{
+  h3
+  {
      margin: 0;
     padding: 0;
     font-family: ${({ theme }) => theme.fonts.heading};
-    font-weight: 400;
+    font-weight: ${({ theme }) => theme.fontWeights.normal};
     text-transform: uppercase;
     text-align: left;
   }
