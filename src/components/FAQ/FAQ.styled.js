@@ -16,9 +16,6 @@ export const FaqSection = styled.section`
       "faqAccordion faqAccordion  faqAccordion faqAccordion . faqContacts faqContacts faqContacts";
     grid-column-gap: 48px;
   }
-
-  /* grid-area: faqTitle;
-  padding-right: 12px; */
 `;
 
 export const FaqTitle = styled.h2`
@@ -30,13 +27,14 @@ export const TitleContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 16px;
-  padding-right: 12px;
+  padding-bottom: 8px;
+  /* padding-right: 12px; */
   cursor: pointer;
 
   @media screen and (${({ theme }) => theme.media.desktop}) {
     gap: 24px;
-    margin-bottom: 24px;
+    /* margin-bottom: 24px; */
+    padding-bottom: 12px;
   }
 
   & > span {
@@ -45,6 +43,9 @@ export const TitleContainer = styled.div`
 
     @media screen and (${({ theme }) => theme.media.desktop}) {
       font-size: 36px;
+    }
+    &.show {
+      color: ${({ theme }) => theme.colors.darkGreen};
     }
   }
 `;
@@ -64,7 +65,8 @@ export const FaqQuestion = styled.h3`
 
 export const FaqAccordion = styled.ul`
   grid-area: faqAccordion;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
+
   @media screen and (${({ theme }) => theme.media.tablet}) {
     padding-top: 5px;
     margin-bottom: 0;
@@ -72,28 +74,46 @@ export const FaqAccordion = styled.ul`
   & > li {
     border-top: 1px solid ${({ theme }) => theme.colors.mainGreen};
     padding-top: 16px;
+    margin-bottom: 8px;
+
+    /* .question.show & {
+      margin-bottom: 16px;
+    } */
 
     @media screen and (${({ theme }) => theme.media.desktop}) {
       padding-top: 24px;
+      margin-bottom: 12px;
     }
 
     & > .question {
       overflow: hidden;
       max-height: 0;
+      /* padding-bottom: 8px; */
       padding-left: 16px;
+      font-size: ${({ theme }) => theme.fontSizes.s};
+      letter-spacing: -0.56px;
+
       transition: all 400ms ease;
+
       @media screen and (${({ theme }) => theme.media.desktop}) {
         padding-left: 32px;
+        font-size: ${({ theme }) => theme.fontSizes.main};
+        letter-spacing: -0.64px;
       }
 
       &.show {
         height: auto;
         max-height: 999px;
-        margin-bottom: 16px;
+        /* margin-bottom: 16px; */
+        padding-top: 8px;
+        padding-bottom: 8px;
+
         transition: all 400ms ease;
 
         @media screen and (${({ theme }) => theme.media.desktop}) {
-          margin-bottom: 24px;
+          /* margin-bottom: 24px; */
+          padding-top: 12px;
+          padding-bottom: 12px;
         }
       }
     }
@@ -101,7 +121,9 @@ export const FaqAccordion = styled.ul`
 `;
 
 export const FaqContacts = styled.div`
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @media screen and (${({ theme }) => theme.media.tablet}) {
     grid-area: faqContacts;
@@ -118,7 +140,6 @@ export const FaqText = styled.p`
   letter-spacing: -0.72px;
 
   @media screen and (${({ theme }) => theme.media.desktop}) {
-    /* font-size: 24px; */
     letter-spacing: -0.64px;
   }
 `;

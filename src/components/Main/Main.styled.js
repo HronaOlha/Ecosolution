@@ -28,11 +28,9 @@ export const MainSection = styled.section`
     padding-top: 264px;
   }
 
-  & > .btn {
+  /* & > .btn {
     grid-area: button;
-
-    width: 149px;
-
+    width: fit-content;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 24px;
@@ -45,7 +43,7 @@ export const MainSection = styled.section`
     @media screen and (${({ theme }) => theme.media.desktop}) {
       margin-bottom: 28px;
     }
-  }
+  } */
 
   & > h1 {
     grid-area: heading;
@@ -57,6 +55,53 @@ export const MainSection = styled.section`
     @media screen and (${({ theme }) => theme.media.desktop}) {
       padding-right: 0;
     }
+  }
+`;
+
+export const ButtonComponent = styled.a`
+  grid-area: button;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin: 0 auto 24px;
+  border: 1px solid ${({ theme }) => theme.colors.mainGreen};
+  border-radius: 50px;
+  width: fit-content;
+  padding: 3px 4px 3px 16px;
+
+  background-color: transparent;
+  font-size: 16px;
+  transition: background-color 400ms ease, color 400ms ease,
+    border-color 400ms ease;
+
+  @media screen and (${({ theme }) => theme.media.tablet}) {
+    width: auto;
+    margin-left: 0;
+    margin-bottom: 26px;
+  }
+  @media screen and (${({ theme }) => theme.media.desktop}) {
+    margin-bottom: 28px;
+  }
+
+  & > p {
+    display: inline-block;
+  }
+
+  & > span {
+    border-radius: 50%;
+    background-color: ${({ theme }) => theme.colors.mainGreen};
+    height: 32px;
+    width: 32px;
+    padding: 5px;
+    color: ${({ theme }) => theme.colors.darkGreen};
+  }
+  &:focus,
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.darkGreen};
+    border-color: ${({ theme }) => theme.colors.darkGreen};
+    color: ${({ theme }) => theme.colors.mainGreen};
   }
 `;
 
@@ -134,38 +179,5 @@ export const ContactInfoContainer = styled.div`
     @media screen and (max-width: 768px) {
       display: none;
     }
-  }
-`;
-
-export const ButtonComponent = styled.a`
-  /* position: relative; */
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  border: 1px solid ${({ theme }) => theme.colors.mainGreen};
-  border-radius: 50px;
-  padding: 3px 4px 3px 16px;
-  background-color: transparent;
-  font-size: 16px;
-  transition: background-color 400ms ease, color 400ms ease,
-    border-color 400ms ease;
-
-  & > p {
-    display: inline-block;
-  }
-
-  & > span {
-    border-radius: 50%;
-    background-color: ${({ theme }) => theme.colors.mainGreen};
-    height: 32px;
-    width: 32px;
-    padding: 5px;
-    color: ${({ theme }) => theme.colors.darkGreen};
-  }
-  &:focus,
-  &:hover {
-    background-color: ${({ theme }) => theme.colors.darkGreen};
-    border-color: ${({ theme }) => theme.colors.darkGreen};
-    color: ${({ theme }) => theme.colors.mainGreen};
   }
 `;

@@ -12,7 +12,7 @@ import { questions } from "../../constants/constants";
 import ContactBtn from "../ContactBtn/ContactBtn";
 
 const Faq = () => {
-  const [selected, setSelected] = useState(null);
+  const [selected, setSelected] = useState(0);
 
   const toggle = (i) => {
     if (selected === i) {
@@ -25,15 +25,14 @@ const Faq = () => {
   return (
     <FaqSection>
       <FaqTitle>Frequently Asked Questions</FaqTitle>
-      {/* <Wrapper> */}
       <FaqAccordion>
         {questions.map((item, i) => (
           <li key={item.id}>
-            <TitleContainer>
-              <span>{selected == i ? "-" : "+"}</span>
-              <FaqQuestion onClick={() => toggle(i)}>
-                {item.question}
-              </FaqQuestion>
+            <TitleContainer onClick={() => toggle(i)}>
+              <span className={selected == i ? "show" : ""}>
+                {selected == i ? "-" : "+"}
+              </span>
+              <FaqQuestion>{item.question}</FaqQuestion>
             </TitleContainer>
             <p className={selected == i ? "question show" : "question"}>
               {item.answer}
@@ -45,8 +44,6 @@ const Faq = () => {
         <FaqText>Didn&#39;t find the answer to your question? </FaqText>
         <ContactBtn text="Contact Us" />
       </FaqContacts>
-
-      {/* </Wrapper> */}
     </FaqSection>
   );
 };

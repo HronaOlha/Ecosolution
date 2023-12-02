@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
 export const Btn = styled.a`
-  /* display: grid; */
-  /* align-items: center; */
-  /* gap: 12px; */
-  display: inline-block;
+  gap: 12px;
+  display: flex;
+  width: fit-content;
 
   border-radius: 50px;
   background-color: ${({ theme }) => theme.colors.mainGreen};
