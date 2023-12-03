@@ -115,6 +115,7 @@ h3{
   /* fill: transparent;  */
   }
   
+  form
   input,
   button,
   textarea,
@@ -125,7 +126,7 @@ h3{
 
 section {
   margin: 0 auto;
-  padding: 20px 20px;
+  padding: 18px 20px;
    max-width: 480px;
 
    @media screen and (${({ theme }) => theme.media.tablet}) {

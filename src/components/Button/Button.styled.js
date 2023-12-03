@@ -9,6 +9,7 @@ export const ButtonComponent = styled.button`
   border-radius: 50px;
   padding: 3px 4px 3px 16px;
   background-color: transparent;
+  cursor: pointer;
   font-size: 16px;
   transition: background-color 400ms ease, color 400ms ease,
     border-color 400ms ease;
@@ -25,7 +26,7 @@ export const ButtonComponent = styled.button`
     padding: 5px;
     color: ${({ theme }) => theme.colors.darkGreen};
   }
-  &:focus,
+  /* &:focus, */
   &:hover {
     background-color: ${({ theme }) => theme.colors.darkGreen};
     border-color: ${({ theme }) => theme.colors.darkGreen};

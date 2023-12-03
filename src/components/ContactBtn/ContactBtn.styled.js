@@ -11,7 +11,7 @@ export const Btn = styled.a`
   color: ${({ theme }) => theme.colors.darkGreen};
   transition: background-color 400ms ease, color 400ms ease;
 
-  &:focus,
+  /* &:focus, */
   &:hover {
     background-color: ${({ theme }) => theme.colors.darkGreen};
     color: ${({ theme }) => theme.colors.mainGreen};

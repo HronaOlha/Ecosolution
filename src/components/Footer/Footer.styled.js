@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Line } from "../HorizontalLine/HorizontalLine.styled";
 
 export const FooterSection = styled.section`
   display: grid;
@@ -9,15 +10,19 @@ export const FooterSection = styled.section`
     "logo logo logo logo logo logo buttonUp"
     ". . . socials . . . "
     "contactsInfo contactsInfo contactsInfo contactsInfo contactsInfo contactsInfo contactsInfo";
-  padding-top: 24px;
+
   padding-bottom: 24px;
 
   @media screen and (${({ theme }) => theme.media.tablet}) {
     grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 16px;
     grid-template-areas:
       "line line line line"
       "logo logo socials buttonUp"
       "contactsInfo contactsInfo contactsInfo contactsInfo";
+
+    padding-top: 50px;
+    padding-bottom: 40px;
   }
   @media screen and (${({ theme }) => theme.media.desktop}) {
     grid-template-columns: repeat(5, 1fr);
@@ -25,6 +30,8 @@ export const FooterSection = styled.section`
       "line line line line line"
       "logo logo . socials buttonUp"
       "contactsInfo contactsInfo contactsInfo contactsInfo contactsInfo";
+
+    padding-top: 60px;
   }
 `;
 
@@ -40,7 +47,7 @@ export const ButtonUp = styled.a`
   color: ${({ theme }) => theme.colors.darkGreen};
   transition: background-color 400ms ease, color 400ms ease;
 
-  &:focus,
+  /* &:focus, */
   &:hover {
     background-color: ${({ theme }) => theme.colors.darkGreen};
     color: ${({ theme }) => theme.colors.mainGreen};
@@ -66,5 +73,12 @@ export const Socials = styled.svg`
 
   &:hover {
     stroke: ${({ theme }) => theme.colors.mainGreen};
+  }
+`;
+
+// Additional styling of styled-components Component
+export const FooterLine = styled(Line)`
+  @media screen and (${({ theme }) => theme.media.tablet}) {
+    margin-bottom: 40px;
   }
 `;

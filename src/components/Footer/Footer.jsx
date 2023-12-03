@@ -5,10 +5,11 @@ import sprite from "../../images/sprite.svg";
 import ContactInfo from "../ContactInfo/ContactInfo";
 import Logo from "../Logo/Logo";
 
-import HorizontalLine from "../HorizontalLine/HorizontalLine";
+// import HorizontalLine from "../HorizontalLine/HorizontalLine";
 
 import {
   FooterSection,
+  FooterLine,
   ButtonUp,
   SocialsContainer,
   Socials,
@@ -17,7 +18,7 @@ import {
 const Footer = () => {
   return (
     <FooterSection>
-      <HorizontalLine />
+      <FooterLine />
       <Logo />
 
       <ButtonUp href="#main">
