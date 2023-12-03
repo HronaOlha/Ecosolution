@@ -19,7 +19,7 @@ export const ContactInfoContainer = styled.div`
     grid-template-areas: "address address .  mail ecosolution";
   }
 
-  & > p {
+  & > .address {
     grid-area: address;
   }
   & > a {
