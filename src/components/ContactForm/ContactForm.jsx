@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import * as yup from "yup";
 import { useFormik } from "formik";
 
@@ -38,8 +37,6 @@ const ContactForm = () => {
       onSubmit,
     });
 
-  // console.log(errors);
-
   return (
     <Form onSubmit={handleSubmit}>
       <Label>
@@ -52,16 +49,14 @@ const ContactForm = () => {
           value={values.name}
           onChange={handleChange}
           onBlur={handleBlur}
-          // onChange={handleChange}
-          // pattern="[a-zA-Zа-яА-Я\s]{1,50}"
           placeholder="John Rosie"
           className={errors.name && touched.name ? "error" : ""}
         />
         <ErrorText className={errors.name && touched.name ? "error" : ""}>
           Wrong Fullname
         </ErrorText>
-        {/* <span>test</span> */}
       </Label>
+
       <Label>
         * E-mail:
         <input
@@ -72,15 +67,14 @@ const ContactForm = () => {
           value={values.email}
           onChange={handleChange}
           onBlur={handleBlur}
-          // pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
           placeholder="johnrosie@gmail.com"
           className={errors.email && touched.email ? "error" : ""}
         />
         <ErrorText className={errors.email && touched.email ? "error" : ""}>
           Wrong Email
         </ErrorText>
-        {/* <span>test</span> */}
       </Label>
+
       <Label>
         * Phone:
         <input
@@ -91,21 +85,19 @@ const ContactForm = () => {
           value={values.phone}
           onChange={handleChange}
           onBlur={handleBlur}
-          // onChange={handleChange}
           placeholder="380961234567"
           className={errors.phone && touched.phone ? "error" : ""}
         />
-        {/* <span>test</span> */}
+        <ErrorText className={errors.phone && touched.phone ? "error" : ""}>
+          Wrong Phone
+        </ErrorText>
       </Label>
-      <ErrorText className={errors.phone && touched.phone ? "error" : ""}>
-        Wrong Phone
-      </ErrorText>
+
       <Label>
         Message:
         <textarea
           name="message"
           id="message"
-          // onChange={handleChange}
           value={values.message}
           onChange={handleChange}
           cols="30"

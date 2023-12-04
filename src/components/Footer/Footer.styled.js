@@ -38,16 +38,17 @@ export const FooterSection = styled.section`
 export const ButtonUp = styled.a`
   grid-area: buttonUp;
   justify-self: end;
+
   border-radius: 50%;
   border: none;
-  background-color: ${({ theme }) => theme.colors.mainGreen};
   height: 32px;
   width: 32px;
   padding: 5px;
+
+  background-color: ${({ theme }) => theme.colors.mainGreen};
   color: ${({ theme }) => theme.colors.darkGreen};
   transition: background-color 400ms ease, color 400ms ease;
 
-  /* &:focus, */
   &:hover {
     background-color: ${({ theme }) => theme.colors.darkGreen};
     color: ${({ theme }) => theme.colors.mainGreen};
@@ -56,6 +57,7 @@ export const ButtonUp = styled.a`
 
 export const SocialsContainer = styled.div`
   grid-area: socials;
+
   display: flex;
   justify-content: center;
   gap: 8px;
@@ -68,6 +70,7 @@ export const SocialsContainer = styled.div`
 export const Socials = styled.svg`
   height: 24px;
   width: 24px;
+
   fill: transparent;
   transition: stroke 400ms ease;
 
@@ -79,6 +82,9 @@ export const Socials = styled.svg`
 // Additional styling of styled-components Component
 export const FooterLine = styled(Line)`
   @media screen and (${({ theme }) => theme.media.tablet}) {
-    margin-bottom: 40px;
+    margin-bottom: 24px;
+  }
+  @media screen and (${({ theme }) => theme.media.desktop}) {
+    margin-bottom: 30px;
   }
 `;

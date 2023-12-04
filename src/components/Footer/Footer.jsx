@@ -5,14 +5,12 @@ import sprite from "../../images/sprite.svg";
 import ContactInfo from "../ContactInfo/ContactInfo";
 import Logo from "../Logo/Logo";
 
-// import HorizontalLine from "../HorizontalLine/HorizontalLine";
-
 import {
   FooterSection,
-  FooterLine,
   ButtonUp,
   SocialsContainer,
   Socials,
+  FooterLine,
 } from "./Footer.styled";
 
 const Footer = () => {
@@ -38,7 +36,7 @@ const Footer = () => {
         </a>
       </SocialsContainer>
 
-      <ContactInfo />
+      <ContactInfo gap={"16px"} />
     </FooterSection>
   );
 };

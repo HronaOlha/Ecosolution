@@ -46,11 +46,11 @@ export const ContactList = styled.ul`
 export const ContactItem = styled.li`
   & > h3 {
     margin-bottom: 8px;
+
     font-family: ${({ theme }) => theme.fonts.body};
     text-transform: none;
 
     @media screen and (${({ theme }) => theme.media.tablet}) {
-      /* margin-bottom: 0; */
       font-size: ${({ theme }) => theme.fontSizes.main};
     }
     @media screen and (${({ theme }) => theme.media.desktop}) {
@@ -69,19 +69,14 @@ export const ContactItem = styled.li`
     text-align: left;
     letter-spacing: -0.8px;
 
-    @media screen and (${({ theme }) => theme.media.tablet}) {
-      padding-right: 100px;
+    &:hover > svg {
+      stroke: ${({ theme }) => theme.colors.mainGreen};
     }
 
     @media screen and (${({ theme }) => theme.media.desktop}) {
-      /* margin-bottom: 0; */
       padding-right: 0;
       font-size: ${({ theme }) => theme.fontSizes.xl};
       letter-spacing: -0.96px;
-    }
-
-    &:hover > svg {
-      stroke: ${({ theme }) => theme.colors.mainGreen};
     }
   }
 `;
@@ -102,6 +97,7 @@ export const ContactIcon = styled.svg`
 export const Socials = styled.div`
   display: flex;
   gap: 32px;
+
   padding-top: 12px;
   padding-left: 12px;
 

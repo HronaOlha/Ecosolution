@@ -5,6 +5,7 @@ export const theme = {
     darkGreen: "#173D33",
     darkGreenAlfa: "rgba(23, 61, 51, 0.25)",
     white: "#ffffff",
+    black: "#000000",
     background: "#F3F5FA",
     lightGrey: "#EAEDF1",
     grey: "#BDBDBD",
@@ -27,6 +28,7 @@ export const theme = {
     extraLarge: {
       xs: "32px",
       s: "36px",
+      ms: "46px",
       m: "48px",
       l: "64px",
       xl: "100px",
@@ -35,6 +37,7 @@ export const theme = {
   },
 
   fontWeights: {
+    extraLight: 100,
     light: 300,
     normal: 400,
     bold: 700,
@@ -46,7 +49,7 @@ export const theme = {
   },
 
   media: {
-    phone: "(min-width: 360px)",
+    phone: "(max-width: 767px)",
     tablet: "(min-width: 768px)",
     desktop: "(min-width: 1280px)",
   },

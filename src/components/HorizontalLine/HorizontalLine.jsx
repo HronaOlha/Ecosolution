@@ -9,5 +9,5 @@ const HorizontalLine = () => {
 export default HorizontalLine;
 
 HorizontalLine.propTypes = {
-  marginbottom: PropTypes.number,
+  marginbottom: PropTypes.string,
 };

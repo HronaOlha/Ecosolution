@@ -6,12 +6,12 @@ export const Btn = styled.a`
   width: fit-content;
 
   border-radius: 50px;
-  background-color: ${({ theme }) => theme.colors.mainGreen};
   padding: 10px 16px;
+
+  background-color: ${({ theme }) => theme.colors.mainGreen};
   color: ${({ theme }) => theme.colors.darkGreen};
   transition: background-color 400ms ease, color 400ms ease;
 
-  /* &:focus, */
   &:hover {
     background-color: ${({ theme }) => theme.colors.darkGreen};
     color: ${({ theme }) => theme.colors.mainGreen};

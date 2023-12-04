@@ -1,14 +1,14 @@
 import { styled } from "styled-components";
 
 export const Overlay = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1200;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   width: 100%;
   height: 100vh;
@@ -22,22 +22,21 @@ export const Overlay = styled.div`
 `;
 
 export const BurgerContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
   position: absolute;
   top: 36px;
   right: 20px;
   bottom: 36px;
   z-index: 1000;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   border-radius: 25px;
   width: 320px;
   padding: 24px;
 
   background-color: rgba(23, 61, 51, 0.75);
-  /* backdrop-filter: blur(12px); */
 
   color: ${({ theme }) => theme.colors.white};
 

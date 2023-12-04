@@ -106,13 +106,10 @@ h3{
   video,
   canvas{
     display: block;
-    /* width: 100%;
-    height: auto; */
   }
 
   svg{
   stroke: ${({ theme }) => theme.colors.darkGreen};
-  /* fill: transparent;  */
   }
   
   form
@@ -137,13 +134,5 @@ section {
   padding: 60px 20px;
   max-width: 1280px;
   }
-}
-
-// Visibility
-.hide-for-mobile {
-  //hide for mobile
-@media screen and (max-width: 768px){
-    display: none;
-} 
 }
 `;

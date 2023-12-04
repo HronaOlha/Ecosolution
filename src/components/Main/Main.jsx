@@ -1,4 +1,3 @@
-// import Button from "../Button/Button";
 import ContactInfo from "../ContactInfo/ContactInfo";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
@@ -20,7 +19,6 @@ const Main = () => {
         sources, generating power generation using energy wind, sun, water,
         biomass
       </Text>
-      {/* <Button text="Learn more" /> */}
       <ButtonComponent className="btn" href="#cases">
         Learn more
         <span>

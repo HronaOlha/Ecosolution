@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-// import { NumericFormat } from "react-number-format";
 
 import { useState } from "react";
 import {
@@ -41,7 +40,16 @@ const Cases = ({ deviceType }) => {
 
   const slidesPerView = deviceType === "mobile" ? 1 : 2;
 
+  const slideNum = () => {
+    let slideNum = currentSlide + slidesPerView;
+
+    if (slideNum > slides.length) slideNum = 1;
+
+    return slideNum;
+  };
+
   const extendedSlides = [...slides, ...slides];
+
   const currentSlides = extendedSlides.slice(
     currentSlide,
     currentSlide + slidesPerView
@@ -52,7 +60,7 @@ const Cases = ({ deviceType }) => {
       <CasesTitle>Successful cases of our company</CasesTitle>
       <SlideBar>
         <p>
-          {addZero(currentSlide + 1)}
+          {addZero(slideNum())}
           <span>/{addZero(slides.length)}</span>
         </p>
 

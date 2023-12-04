@@ -3,11 +3,16 @@ import styled from "styled-components";
 export const ValuesTexts = styled.div`
   & > p {
     margin-bottom: 36px;
+
+    @media screen and (${({ theme }) => theme.media.tablet}) {
+      margin-bottom: 0;
+    }
   }
 
   @media screen and (${({ theme }) => theme.media.tablet}) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
     margin-bottom: 100px;
 
     & > h2 {
@@ -22,10 +27,10 @@ export const ValuesTexts = styled.div`
   }
 
   @media screen and (${({ theme }) => theme.media.tablet}) {
-    margin-bottom: 124px;
+    margin-bottom: 100px;
 
     & > h2 {
-      padding-right: 232px;
+      padding-right: 124px;
     }
 
     & > p {
@@ -51,9 +56,9 @@ export const ValuesGrid = styled.div`
     }
 
     & > h3 {
-      padding-bottom: 33px;
-      border-bottom: 1px solid ${({ theme }) => theme.colors.mainGreen};
       margin-bottom: 12px;
+      border-bottom: 1px solid ${({ theme }) => theme.colors.mainGreen};
+      padding-bottom: 33px;
 
       @media screen and (${({ theme }) => theme.media.tablet}) {
         padding-bottom: 51px;
@@ -64,9 +69,10 @@ export const ValuesGrid = styled.div`
       }
 
       & > svg {
+        margin-right: 8px;
         height: 16px;
         width: 16px;
-        margin-right: 8px;
+
         fill: transparent;
 
         @media screen and (${({ theme }) => theme.media.desktop}) {
@@ -99,10 +105,10 @@ export const ValuesGrid = styled.div`
 
 export const WindFarmImg = styled.img`
   grid-area: windFarmImg;
-  width: 100%; /* Додайте це, щоб змінити ширину картинки */
+  width: 100%;
 `;
 
 export const WorkerTab = styled.img`
   grid-area: workerTab;
-  width: 100%; /* Додайте це, щоб змінити ширину картинки */
+  width: 100%;
 `;

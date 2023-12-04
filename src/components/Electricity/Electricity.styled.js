@@ -6,6 +6,7 @@ export const ElectricitySection = styled.section`
 
 export const ElectricityTitle = styled.h2`
   padding: 0 17px;
+
   text-align: center;
 
   @media screen and (${({ theme }) => theme.media.tablet}) {
@@ -19,9 +20,9 @@ export const ElectricityTitle = styled.h2`
 
 export const VerticalLine = styled.div`
   margin: 0 auto 24px;
+  border-left: 1px solid ${({ theme }) => theme.colors.mainGreen};
   height: 48px;
   width: 1px;
-  border-left: 1px solid ${({ theme }) => theme.colors.mainGreen};
 
   @media screen and (${({ theme }) => theme.media.tablet}) {
     height: 87px;
@@ -43,6 +44,7 @@ export const ElectricityCounter = styled.div`
 
   & > p {
     display: inline-block;
+
     font-size: ${({ theme }) => theme.fontSizes.extraLarge.m};
     line-height: 48px;
     font-weight: ${({ theme }) => theme.fontWeights.bold};

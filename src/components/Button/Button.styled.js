@@ -4,9 +4,11 @@ export const ButtonComponent = styled.button`
   display: flex;
   align-items: center;
   gap: 12px;
+
   border: 1px solid ${({ theme }) => theme.colors.mainGreen};
   border-radius: 50px;
   padding: 3px 4px 3px 16px;
+
   background-color: transparent;
   cursor: pointer;
   font-size: 16px;
@@ -19,10 +21,11 @@ export const ButtonComponent = styled.button`
 
   & > span {
     border-radius: 50%;
-    background-color: ${({ theme }) => theme.colors.mainGreen};
     height: 32px;
     width: 32px;
     padding: 5px;
+
+    background-color: ${({ theme }) => theme.colors.mainGreen};
     color: ${({ theme }) => theme.colors.darkGreen};
   }
 

@@ -11,7 +11,6 @@ export const MainSection = styled.section`
   @media screen and (${({ theme }) => theme.media.tablet}) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* grid-column-gap: 40px; */
     grid-template-areas:
       "heading heading text text"
       "heading heading button button"
@@ -28,25 +27,9 @@ export const MainSection = styled.section`
     padding-top: 264px;
   }
 
-  /* & > .btn {
-    grid-area: button;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 24px;
-
-    @media screen and (${({ theme }) => theme.media.tablet}) {
-      width: auto;
-      margin-left: 0;
-      margin-bottom: 26px;
-    }
-    @media screen and (${({ theme }) => theme.media.desktop}) {
-      margin-bottom: 28px;
-    }
-  } */
-
   & > h1 {
     grid-area: heading;
+
     margin: 0 0 24px 0;
 
     @media screen and (${({ theme }) => theme.media.tablet}) {
@@ -77,9 +60,9 @@ export const ButtonComponent = styled.a`
     border-color 400ms ease;
 
   @media screen and (${({ theme }) => theme.media.tablet}) {
-    width: auto;
     margin-left: 0;
     margin-bottom: 26px;
+    width: auto;
   }
   @media screen and (${({ theme }) => theme.media.desktop}) {
     margin-bottom: 28px;
@@ -91,16 +74,17 @@ export const ButtonComponent = styled.a`
 
   & > span {
     border-radius: 50%;
-    background-color: ${({ theme }) => theme.colors.mainGreen};
     height: 32px;
     width: 32px;
     padding: 5px;
+
+    background-color: ${({ theme }) => theme.colors.mainGreen};
     color: ${({ theme }) => theme.colors.darkGreen};
   }
   &:focus,
   &:hover {
-    background-color: ${({ theme }) => theme.colors.darkGreen};
     border-color: ${({ theme }) => theme.colors.darkGreen};
+    background-color: ${({ theme }) => theme.colors.darkGreen};
     color: ${({ theme }) => theme.colors.mainGreen};
   }
 `;
@@ -120,8 +104,9 @@ export const Text = styled.p`
 `;
 
 export const MainContacts = styled.div`
-  text-align: center;
   margin-bottom: 36px;
+
+  text-align: center;
 
   @media screen and (${({ theme }) => theme.media.tablet}) {
     grid-area: mainContacts;
@@ -155,15 +140,6 @@ export const MainImage = styled.div`
   }
 `;
 
-// Additional styling of styled-components Component
-export const MainLine = styled(Line)`
-  margin-bottom: 24px;
-
-  @media screen and (${({ theme }) => theme.media.tablet}) {
-    margin-bottom: 16px;
-  }
-`;
-
 export const ContactInfoContainer = styled.div`
   grid-area: mainContacts;
   margin-bottom: 36px;
@@ -176,8 +152,17 @@ export const ContactInfoContainer = styled.div`
   }
 
   & > div > .ecosolution {
-    @media screen and (max-width: 768px) {
+    @media screen and (${({ theme }) => theme.media.phone}) {
       display: none;
     }
+  }
+`;
+
+// Additional styling of styled-components Component
+export const MainLine = styled(Line)`
+  margin-bottom: 24px;
+
+  @media screen and (${({ theme }) => theme.media.tablet}) {
+    margin-bottom: 16px;
   }
 `;

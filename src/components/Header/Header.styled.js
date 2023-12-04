@@ -4,10 +4,13 @@ export const HeaderSection = styled.section`
   position: fixed;
   right: 0;
   left: 0;
-  padding-top: 36px;
-  padding-bottom: 36px;
+
   display: flex;
   justify-content: space-between;
+
+  padding-top: 36px;
+  padding-bottom: 36px;
+
   transition: backdrop-filter 300ms ease;
 
   &.scrolled {
@@ -24,10 +27,11 @@ export const Nav = styled.nav`
 export const BurgerBtn = styled.button`
   border-radius: 50%;
   border: none;
-  background-color: ${({ theme }) => theme.colors.lightGreen};
   height: 40px;
   width: 40px;
   padding: 12px;
+
+  background-color: ${({ theme }) => theme.colors.lightGreen};
   color: ${({ theme }) => theme.colors.darkGreen};
   transition: background-color 400ms ease;
 

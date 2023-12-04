@@ -15,9 +15,14 @@ export const CasesSection = styled.section`
 
 export const CasesTitle = styled.h2`
   grid-area: title;
+
   padding-right: 50px;
 
+  @media screen and (${({ theme }) => theme.media.tablet}) {
+    margin-bottom: 38px;
+  }
   @media screen and (${({ theme }) => theme.media.desktop}) {
+    margin-bottom: 20px;
     padding-right: 220px;
   }
 `;
@@ -62,12 +67,14 @@ export const ButtonContainer = styled.div`
 
 export const ToggleButton = styled.button`
   display: inline-block;
+
   border-radius: 50px;
   border: 1px solid;
-  background-color: transparent;
   height: 66px;
   width: 66px;
   padding: 15px;
+
+  background-color: transparent;
   color: ${({ theme }) => theme.colors.darkGreen};
   transition: border-color 400ms ease, color 400ms ease;
 
@@ -115,8 +122,6 @@ export const MainInfoBox = styled.div`
   display: flex;
   justify-content: space-between;
 
-  /* align-items: center; */
-  /* gap: 61px; */
   margin-bottom: 12px;
   padding-bottom: 21px;
   border-bottom: 1px solid ${({ theme }) => theme.colors.mainGreen};
@@ -130,14 +135,14 @@ export const MainInfoBox = styled.div`
     margin: 0;
     height: 66px;
     width: 175px;
-    /* width: fit-content; */
+
     font-size: ${({ theme }) => theme.fontSizes.m};
     font-weight: ${({ theme }) => theme.fontWeights.normal};
     letter-spacing: -0.72px;
 
     @media screen and (${({ theme }) => theme.media.tablet}) {
       height: 72px;
-      width: 194px;
+      width: 200px;
       text-align: left;
       font-size: ${({ theme }) => theme.fontSizes.l};
     }
@@ -149,15 +154,16 @@ export const MainInfoBox = styled.div`
   }
 
   & > a {
-    /* height: min-content; */
-
     display: inline-block;
-    border-radius: 50px;
+
     border: none;
-    background-color: ${({ theme }) => theme.colors.mainGreen};
+    border-radius: 50px;
+
     height: 60px;
     width: 60px;
     padding: 16px;
+
+    background-color: ${({ theme }) => theme.colors.mainGreen};
     color: ${({ theme }) => theme.colors.darkGreen};
     transition: background-color 400ms ease, color 400ms ease;
 
@@ -171,6 +177,7 @@ export const MainInfoBox = styled.div`
 export const InfoBox = styled.div`
   display: flex;
   justify-content: space-between;
+
   font-size: ${({ theme }) => theme.fontSizes.xs};
 
   @media screen and (${({ theme }) => theme.media.tablet}) {

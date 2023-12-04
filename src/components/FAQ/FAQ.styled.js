@@ -4,46 +4,51 @@ export const FaqSection = styled.section`
   @media screen and (${({ theme }) => theme.media.tablet}) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:
-      "faqAccordion faqTitle"
-      "faqAccordion faqContacts";
     grid-column-gap: 24px;
   }
   @media screen and (${({ theme }) => theme.media.desktop}) {
     grid-template-columns: repeat(8, 1fr);
-    grid-template-areas:
-      "faqAccordion faqAccordion  faqAccordion faqAccordion . faqTitle faqTitle faqTitle"
-      "faqAccordion faqAccordion  faqAccordion faqAccordion . faqContacts faqContacts faqContacts";
     grid-column-gap: 48px;
   }
 `;
 
 export const FaqTitle = styled.h2`
-  grid-area: faqTitle;
   padding-right: 12px;
+
+  @media screen and (${({ theme }) => theme.media.tablet}) {
+    grid-column: 2/3;
+  }
+  @media screen and (${({ theme }) => theme.media.desktop}) {
+    grid-column: 6/9;
+  }
 `;
 
 export const TitleContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
+
   padding-bottom: 8px;
-  /* padding-right: 12px; */
+
   cursor: pointer;
 
+  @media screen and (${({ theme }) => theme.media.tablet}) {
+    gap: 16px;
+  }
   @media screen and (${({ theme }) => theme.media.desktop}) {
     gap: 24px;
-    /* margin-bottom: 24px; */
     padding-bottom: 12px;
   }
 
   & > span {
-    font-size: ${({ theme }) => theme.fontSizes.l};
+    font-size: ${({ theme }) => theme.fontSizes.xxl};
+    font-weight: ${({ theme }) => theme.fontWeights.extraLight};
     color: ${({ theme }) => theme.colors.mainGreen};
 
-    @media screen and (${({ theme }) => theme.media.desktop}) {
-      font-size: 36px;
+    @media screen and (${({ theme }) => theme.media.tablet}) {
+      font-size: ${({ theme }) => theme.fontSizes.extraLarge.ms};
     }
+
     &.show {
       color: ${({ theme }) => theme.colors.darkGreen};
     }
@@ -64,21 +69,20 @@ export const FaqQuestion = styled.h3`
 `;
 
 export const FaqAccordion = styled.ul`
-  grid-area: faqAccordion;
   margin-bottom: 28px;
 
   @media screen and (${({ theme }) => theme.media.tablet}) {
-    padding-top: 5px;
-    margin-bottom: 0;
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
+  @media screen and (${({ theme }) => theme.media.desktop}) {
+    grid-column: 1/5;
+    grid-row: 1/3;
   }
   & > li {
     border-top: 1px solid ${({ theme }) => theme.colors.mainGreen};
     padding-top: 16px;
     margin-bottom: 8px;
-
-    /* .question.show & {
-      margin-bottom: 16px;
-    } */
 
     @media screen and (${({ theme }) => theme.media.desktop}) {
       padding-top: 24px;
@@ -87,16 +91,20 @@ export const FaqAccordion = styled.ul`
 
     & > .question {
       overflow: hidden;
+
       max-height: 0;
-      /* padding-bottom: 8px; */
-      padding-left: 16px;
+      padding-left: 20px;
+
       font-size: ${({ theme }) => theme.fontSizes.s};
-      letter-spacing: -0.56px;
+      letter-spacing: -0.64px;
 
       transition: all 400ms ease;
 
+      @media screen and (${({ theme }) => theme.media.tablet}) {
+        padding-left: 37px;
+      }
       @media screen and (${({ theme }) => theme.media.desktop}) {
-        padding-left: 32px;
+        padding-left: 44px;
         font-size: ${({ theme }) => theme.fontSizes.main};
         letter-spacing: -0.64px;
       }
@@ -104,14 +112,12 @@ export const FaqAccordion = styled.ul`
       &.show {
         height: auto;
         max-height: 999px;
-        /* margin-bottom: 16px; */
         padding-top: 8px;
         padding-bottom: 8px;
 
         transition: all 400ms ease;
 
         @media screen and (${({ theme }) => theme.media.desktop}) {
-          /* margin-bottom: 24px; */
           padding-top: 12px;
           padding-bottom: 12px;
         }
@@ -126,20 +132,28 @@ export const FaqContacts = styled.div`
   align-items: center;
 
   @media screen and (${({ theme }) => theme.media.tablet}) {
-    grid-area: faqContacts;
+    grid-column: 2/3;
+    grid-row: 2/3;
+
     justify-self: start;
     align-self: end;
 
     margin-bottom: 16px;
   }
+  @media screen and (${({ theme }) => theme.media.desktop}) {
+    grid-column: 6/9;
+    grid-row: 2/3;
+  }
 `;
 
 export const FaqText = styled.p`
   margin-bottom: 12px;
+
   font-size: ${({ theme }) => theme.fontSizes.m};
   letter-spacing: -0.72px;
 
   @media screen and (${({ theme }) => theme.media.desktop}) {
+    font-size: ${({ theme }) => theme.fontSizes.xl};
     letter-spacing: -0.64px;
   }
 `;

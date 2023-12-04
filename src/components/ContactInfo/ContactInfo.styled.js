@@ -5,8 +5,10 @@ export const ContactInfoContainer = styled.div`
 
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: ${(props) => props.gap || "8px"};
   align-items: center;
+
+  letter-spacing: -0.64px;
 
   @media screen and (${({ theme }) => theme.media.tablet}) {
     display: grid;
@@ -27,6 +29,7 @@ export const ContactInfoContainer = styled.div`
   }
   & > .ecosolution {
     grid-area: ecosolution;
+
     justify-self: end;
   }
 `;
