@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const ButtonComponent = styled.button`
-  position: relative;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -26,7 +25,7 @@ export const ButtonComponent = styled.button`
     padding: 5px;
     color: ${({ theme }) => theme.colors.darkGreen};
   }
-  /* &:focus, */
+
   &:hover {
     background-color: ${({ theme }) => theme.colors.darkGreen};
     border-color: ${({ theme }) => theme.colors.darkGreen};

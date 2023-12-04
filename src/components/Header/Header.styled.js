@@ -4,10 +4,10 @@ export const HeaderSection = styled.section`
   position: fixed;
   right: 0;
   left: 0;
-  display: flex;
-  justify-content: space-between;
   padding-top: 36px;
   padding-bottom: 36px;
+  display: flex;
+  justify-content: space-between;
   transition: backdrop-filter 300ms ease;
 
   &.scrolled {
@@ -36,20 +36,3 @@ export const BurgerBtn = styled.button`
     background-color: ${({ theme }) => theme.colors.mainGreen};
   }
 `;
-
-// export const ContactSpan = styled.span`
-//   display: inline-block;
-//   height: 14px;
-//   width: 14px;
-//   border-radius: 50%;
-//   background-color: ${({ theme }) => theme.colors.darkGreen};
-//   transition: background-color 400ms ease;
-
-//   ${ContactBtn}:hover & {
-//     background-color: ${({ theme }) => theme.colors.mainGreen};
-//   }
-
-//   & > svg {
-//     color: white;
-//   }
-// `;

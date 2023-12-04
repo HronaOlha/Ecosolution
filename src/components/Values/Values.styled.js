@@ -31,7 +31,6 @@ export const ValuesTexts = styled.div`
     & > p {
       align-items: end;
       border-left: 1px solid ${({ theme }) => theme.colors.mainGreen};
-      padding-left: 161px;
     }
   }
 `;

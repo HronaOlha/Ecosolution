@@ -27,7 +27,7 @@ const BurgerMenu = ({ handleMenuToggle }) => {
 
           <PointsList>
             {links.map((item) => (
-              <MenuItem key={item.id}>
+              <MenuItem key={item.id} onClick={handleMenuToggle}>
                 <ItemText href={item.link}>{item.value}</ItemText>
                 <GoArrowUpRight />
               </MenuItem>
