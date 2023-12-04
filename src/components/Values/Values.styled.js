@@ -1,40 +1,35 @@
 import styled from "styled-components";
 
 export const ValuesTexts = styled.div`
+  & > p {
+    margin-bottom: 36px;
+  }
+
   @media screen and (${({ theme }) => theme.media.tablet}) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 100px;
-  }
-  @media screen and (${({ theme }) => theme.media.desktop}) {
-    margin-bottom: 124px;
-  }
 
-  & > h2 {
-    /* margin: 0 0 24px 0; */
-    padding-right: 10px;
-
-    @media screen and (${({ theme }) => theme.media.tablet}) {
+    & > h2 {
+      padding-right: 10px;
       margin: 0;
-      padding-right: 80px;
     }
-    @media screen and (${({ theme }) => theme.media.desktop}) {
-      padding-right: 232px;
-    }
-  }
 
-  & > p {
-    margin-bottom: 36px;
-
-    @media screen and (${({ theme }) => theme.media.tablet}) {
-      margin-bottom: 0;
+    & > p {
       border-left: 1px solid ${({ theme }) => theme.colors.mainGreen};
       padding-left: 11px;
     }
+  }
 
-    @media screen and (${({ theme }) => theme.media.desktop}) {
+  @media screen and (${({ theme }) => theme.media.desktop}) {
+    margin-bottom: 124px;
+
+    & > h2 {
+      padding-right: 232px;
+    }
+
+    & > p {
       align-items: end;
-
       border-left: 1px solid ${({ theme }) => theme.colors.mainGreen};
       padding-left: 161px;
     }
@@ -50,6 +45,7 @@ export const ValuesGrid = styled.div`
     height: 197px;
     padding: 13px 12px 12px;
     background-color: ${({ theme }) => theme.colors.lightGrey};
+
     @media screen and (${({ theme }) => theme.media.desktop}) {
       height: 100%;
       padding: 48px 24px 12px;
@@ -63,6 +59,7 @@ export const ValuesGrid = styled.div`
       @media screen and (${({ theme }) => theme.media.tablet}) {
         padding-bottom: 51px;
       }
+
       @media screen and (${({ theme }) => theme.media.desktop}) {
         padding-bottom: 94px;
       }
@@ -95,6 +92,7 @@ export const ValuesGrid = styled.div`
       "one two windFarmImg windFarmImg"
       "workerTab workerTab three four";
   }
+
   @media screen and (${({ theme }) => theme.media.desktop}) {
     grid-gap: 48px;
   }
@@ -102,8 +100,10 @@ export const ValuesGrid = styled.div`
 
 export const WindFarmImg = styled.img`
   grid-area: windFarmImg;
+  width: 100%; /* Додайте це, щоб змінити ширину картинки */
 `;
 
 export const WorkerTab = styled.img`
   grid-area: workerTab;
+  width: 100%; /* Додайте це, щоб змінити ширину картинки */
 `;

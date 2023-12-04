@@ -1,29 +1,102 @@
 import styled from "styled-components";
 
 export const CasesSection = styled.section`
-  /* overflow: hidden; */
+  @media screen and (${({ theme }) => theme.media.tablet}) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "title slideBar"
+      "list list";
+  }
+  @media screen and (${({ theme }) => theme.media.desktop}) {
+    grid-row-gap: 100px;
+  }
 `;
 
 export const CasesTitle = styled.h2`
-  padding-right: 48px;
+  grid-area: title;
+  padding-right: 50px;
+
+  @media screen and (${({ theme }) => theme.media.desktop}) {
+    padding-right: 220px;
+  }
+`;
+
+export const SlideBar = styled.div`
+  grid-area: slideBar;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 20px;
+
+  @media screen and (${({ theme }) => theme.media.tablet}) {
+    padding-left: 9px;
+    border-left: 1px solid ${({ theme }) => theme.colors.mainGreen};
+  }
+  @media screen and (${({ theme }) => theme.media.desktop}) {
+    padding-left: 161px;
+  }
+
+  & > p {
+    font-size: ${({ theme }) => theme.fontSizes.xxl};
+    font-weight: ${({ theme }) => theme.fontWeights.light};
+    letter-spacing: -1.12px;
+
+    & > span {
+      color: ${({ theme }) => theme.colors.darkGreenAlfa};
+    }
+  }
+`;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  gap: 12px;
+
+  padding-bottom: 7px;
+
+  @media screen and (${({ theme }) => theme.media.desktop}) {
+    gap: 24px;
+  }
+`;
+
+export const ToggleButton = styled.button`
+  display: inline-block;
+  border-radius: 50px;
+  border: 1px solid;
+  background-color: transparent;
+  height: 66px;
+  width: 66px;
+  padding: 15px;
+  color: ${({ theme }) => theme.colors.darkGreen};
+  transition: border-color 400ms ease, color 400ms ease;
+
+  &:hover {
+    border-color: ${({ theme }) => theme.colors.mainGreen};
+    color: ${({ theme }) => theme.colors.mainGreen};
+  }
+
+  @media screen and (${({ theme }) => theme.media.desktop}) {
+    height: 84px;
+    width: 84px;
+    padding: 24px;
+  }
 `;
 
 export const CasesList = styled.ul`
-  /* width: 100%; */
-  overflow: hidden;
+  grid-area: list;
 
   display: flex;
   gap: 24px;
 
-  transition: "transform 0.3s ease";
-
-  /* @media screen and (${({ theme }) => theme.media.tablet}) {
-    gap: 24px;
-  } */
+  @media screen and (${({ theme }) => theme.media.desktop}) {
+    gap: 48px;
+  }
 `;
 
 export const CasesItem = styled.li`
   width: 100%;
+
   & > img {
     width: 100%;
   }
@@ -32,28 +105,52 @@ export const CasesItem = styled.li`
 export const CasesThumb = styled.div`
   padding: 24px 12px 12px;
   background-color: ${({ theme }) => theme.colors.lightGrey};
+
+  @media screen and (${({ theme }) => theme.media.desktop}) {
+    padding: 36px 48px;
+  }
 `;
 
 export const MainInfoBox = styled.div`
   display: flex;
-  /* gap: 60px; */
-
   justify-content: space-between;
-  gap: 61px;
+
+  /* align-items: center; */
+  /* gap: 61px; */
   margin-bottom: 12px;
   padding-bottom: 21px;
   border-bottom: 1px solid ${({ theme }) => theme.colors.mainGreen};
 
+  @media screen and (${({ theme }) => theme.media.desktop}) {
+    margin-bottom: 24px;
+    padding-bottom: 34px;
+  }
+
   & > h4 {
     margin: 0;
+    height: 66px;
     width: 175px;
+    /* width: fit-content; */
     font-size: ${({ theme }) => theme.fontSizes.m};
     font-weight: ${({ theme }) => theme.fontWeights.normal};
-    /* text-align: left; */
     letter-spacing: -0.72px;
+
+    @media screen and (${({ theme }) => theme.media.tablet}) {
+      height: 72px;
+      width: 194px;
+      text-align: left;
+      font-size: ${({ theme }) => theme.fontSizes.l};
+    }
+    @media screen and (${({ theme }) => theme.media.desktop}) {
+      height: 58px;
+      width: 357px;
+      font-size: ${({ theme }) => theme.fontSizes.xl};
+    }
   }
 
   & > a {
+    /* height: min-content; */
+
     display: inline-block;
     border-radius: 50px;
     border: none;
@@ -64,7 +161,6 @@ export const MainInfoBox = styled.div`
     color: ${({ theme }) => theme.colors.darkGreen};
     transition: background-color 400ms ease, color 400ms ease;
 
-    /* &:focus, */
     &:hover {
       background-color: ${({ theme }) => theme.colors.darkGreen};
       color: ${({ theme }) => theme.colors.mainGreen};
@@ -76,4 +172,11 @@ export const InfoBox = styled.div`
   display: flex;
   justify-content: space-between;
   font-size: ${({ theme }) => theme.fontSizes.xs};
+
+  @media screen and (${({ theme }) => theme.media.tablet}) {
+    font-size: ${({ theme }) => theme.fontSizes.s};
+  }
+  @media screen and (${({ theme }) => theme.media.desktop}) {
+    font-size: ${({ theme }) => theme.fontSizes.main};
+  }
 `;

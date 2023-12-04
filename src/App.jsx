@@ -39,7 +39,7 @@ function App() {
       <Main />
       <Values deviceType={deviceType} />
       <Electricity />
-      <Cases />
+      <Cases deviceType={deviceType} />
       <Faq />
       <Contact />
       <Footer />
