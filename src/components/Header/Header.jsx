@@ -6,10 +6,12 @@ import { IoIosMenu } from "react-icons/io";
 import Logo from "../Logo/Logo";
 import { HeaderSection, Nav, BurgerBtn } from "./Header.styled";
 import ContactBtn from "../ContactBtn/ContactBtn";
-// import { MenuBurger } from "../BurgerMenu/BurgerMenu";
+// import MenuBurger from "../BurgerMenu/BurgerMenu";
+import BurgerMenu from "../BurgerMenu/BurgerMenu";
 
 const Header = ({ deviceType }) => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,16 +28,20 @@ const Header = ({ deviceType }) => {
     };
   }, []);
 
+  const handleMenuToggle = () => {
+    setIsMenuOpen((prev) => !prev);
+  };
+
   return (
     <HeaderSection className={isScrolled ? "scrolled" : ""}>
       <Logo />
       <Nav>
-        <BurgerBtn>
+        <BurgerBtn onClick={handleMenuToggle}>
           <IoIosMenu size="100%" />
         </BurgerBtn>
-
         {deviceType === "tablet" && <ContactBtn text="Get in touch" />}
         {deviceType === "desktop" && <ContactBtn text="Get in touch" />}
+        {isMenuOpen && <BurgerMenu handleMenuToggle={handleMenuToggle} />}
       </Nav>
     </HeaderSection>
   );

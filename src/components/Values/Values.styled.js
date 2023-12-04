@@ -21,7 +21,7 @@ export const ValuesTexts = styled.div`
     }
   }
 
-  @media screen and (${({ theme }) => theme.media.desktop}) {
+  @media screen and (${({ theme }) => theme.media.tablet}) {
     margin-bottom: 124px;
 
     & > h2 {

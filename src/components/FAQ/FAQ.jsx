@@ -23,7 +23,7 @@ const Faq = () => {
   };
 
   return (
-    <FaqSection>
+    <FaqSection id="faq">
       <FaqTitle>Frequently Asked Questions</FaqTitle>
       <FaqAccordion>
         {questions.map((item, i) => (

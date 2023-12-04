@@ -15,7 +15,7 @@ import workerDesk from "../../images/worker-by-solar-panels-desk.png";
 
 const Values = ({ deviceType }) => {
   return (
-    <section>
+    <section id="values">
       <ValuesTexts>
         <h2>Main values of our company</h2>
         <p>

@@ -28,7 +28,7 @@ const Footer = () => {
       <SocialsContainer>
         <a href="/">
           <Socials className="facebook">
-            <use href={sprite + "#facebook"} color="red" />
+            <use href={sprite + "#facebook"} />
           </Socials>
         </a>
         <a href="/">

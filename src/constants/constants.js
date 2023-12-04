@@ -4,6 +4,14 @@ import SliderThree from "../images/slide3.png";
 import SliderFour from "../images/slide4.png";
 import SliderFive from "../images/slide5.png";
 
+export const links = [
+  { id: 1, value: "Main", link: "#main" },
+  { id: 2, value: "About", link: "#values" },
+  { id: 3, value: "Cases", link: "#cases" },
+  { id: 4, value: "FAQ", link: "#faq" },
+  { id: 5, value: "Contact Us", link: "#contact" },
+];
+
 // export const VALUES = [
 //   {
 //     id: 1,
